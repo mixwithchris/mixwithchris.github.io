@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Chris Samayoa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chris Samayoa | Audio Engineer</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -11,129 +11,65 @@
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #0b0b0b;
-      color: #f5f5f5;
+      background: #0e0e0e;
+      color: #f2f2f2;
       line-height: 1.6;
     }
 
-    /* NAV */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(6px);
+    h1, h2 {
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 0.5px;
-    }
-
-    .brand span {
-      display: block;
-      font-weight: 400;
-      font-size: 0.8rem;
-      opacity: 0.8;
-    }
-
-    nav a {
-      color: #fff;
-      margin-left: 24px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      opacity: 0.85;
-    }
-
-    nav a:hover {
-      opacity: 1;
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px;
     }
 
     /* HERO */
     .hero {
-      height: 100vh;
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
-        url("assets/images/Hero.jpeg") center / cover no-repeat;
-      display: flex;
-      align-items: center;
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.9)),
+        url('/assets/images/Hero.jpeg') center / cover no-repeat;
+      text-align: center;
       padding: 140px 20px;
     }
 
-    .hero-content {
-      max-width: 1200px;
-      margin: auto;
-    }
-
     .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 700;
-      margin-bottom: 12px;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
     .hero p {
-      max-width: 600px;
-      font-size: 1rem;
-      opacity: 0.9;
-    }
-
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 100px 24px;
-    }
-
-    section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 32px;
-      letter-spacing: 1px;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     /* ABOUT */
-    .about-grid {
+    .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 50px;
       align-items: center;
     }
 
-    .about-grid img {
+    .about img {
       width: 100%;
       border-radius: 6px;
-    }
-
-    .about-text p {
-      margin-bottom: 16px;
-      font-size: 0.95rem;
-      opacity: 0.9;
     }
 
     /* PORTFOLIO */
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
 
     .portfolio-grid img {
@@ -142,96 +78,95 @@
     }
 
     /* CONTACT */
-    .contact p {
-      font-size: 0.95rem;
-      opacity: 0.9;
+    .contact {
+      text-align: center;
+      padding-bottom: 120px;
     }
 
     .contact a {
-      color: #4da3ff;
+      color: #ffffff;
       text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid #555;
     }
 
     footer {
       text-align: center;
-      padding: 40px;
-      font-size: 0.8rem;
-      opacity: 0.5;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #222;
     }
 
-    @media (max-width: 900px) {
-      .about-grid {
+    @media (max-width: 768px) {
+      .about {
         grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
       }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <div class="nav">
-    <div class="brand">
-      <span>Chris Samayoa</span>
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-content">
-    <h1>Mix With Chris</h1>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Chris Samayoa</h1>
     <p>
-      Audio Engineer specializing in mixing, mastering, podcast editing, and live sound.
-      Clean, punchy, and professional audio.
+      Audio Engineer specializing in mixing, mastering, podcast editing,
+      and live sound. Clean, punchy, and professional audio.
     </p>
   </div>
-</section>
 
-<section id="about">
-  <h2>ABOUT</h2>
-  <div class="about-grid">
-    <img src="assets/images/About.JPG" alt="About Chris">
-    <div class="about-text">
+  <!-- ABOUT -->
+  <section class="about">
+    <img src="/assets/images/About.JPG" alt="Chris Samayoa performing live" />
+
+    <div>
+      <h2>About</h2>
       <p>
         Hi, I'm Chris Samayoa, an experienced audio engineer with a passion for music and sound.
-        I'm set to graduate this spring from the Los Angeles Recording School, where I've honed my
-        skills in audio production and learned the ins and outs of the industry.
+        I'm set to graduate this spring from the Los Angeles Recording School, where I’ve honed
+        my skills in audio production and learned the ins and outs of the industry.
       </p>
+
       <p>
         With over three years of hands-on experience using Pro Tools, I specialize in mixing,
         mastering, and recording, ensuring your project sounds polished and professional.
       </p>
+
       <p>
         Whether you're working on music, podcasts, or sound design, I'm dedicated to bringing
         your vision to life with precision and clarity. Let's make your sound the best it can be!
       </p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="portfolio">
-  <h2>PORTFOLIO</h2>
-  <div class="portfolio-grid">
-    <img src="assets/images/Portfolio-1.jpg" alt="Portfolio 1">
-    <img src="assets/images/Portfolio-2.jpg" alt="Portfolio 2">
-  </div>
-</section>
+  <!-- PORTFOLIO -->
+  <section>
+    <h2 style="text-align:center;">Portfolio</h2>
 
-<section id="contact" class="contact">
-  <h2>CONTACT</h2>
-  <p>
-    Email: <a href="mailto:mixwithchriss@gmail.com">mixwithchriss@gmail.com</a>
-  </p>
-</section>
+    <div class="portfolio-grid">
+      <img src="/assets/images/Portfolio-1.jpg" alt="Studio gear rack" />
+      <img src="/assets/images/Portfolio-2.jpg" alt="Audio processing equipment" />
+    </div>
+  </section>
 
-<footer>
-  © 2026 Chris Samayoa. All rights reserved.
-</footer>
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>
+      Email:
+      <a href="mailto:mixwithchriss@gmail.com">mixwithchriss@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Chris Samayoa · All Rights Reserved
+  </footer>
 
 </body>
 </html>
-
