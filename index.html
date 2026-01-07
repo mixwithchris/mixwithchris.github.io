@@ -40,13 +40,13 @@
     }
 
     .header-left {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
     }
 
     .header-right a {
       margin-left: 30px;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
     }
 
@@ -55,24 +55,24 @@
     }
 
     /* ================= HERO ================= */
-   .hero {
-  height: 30vh;
-  min-height: 380px;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.25) 0%,
-      rgba(0,0,0,0.55) 55%,
-      rgba(0,0,0,0.9) 100%
-    ),
-    url("assets/images/Hero.jpeg") center/cover no-repeat;
+    .hero {
+      height: 30vh;
+      min-height: 360px;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.25) 0%,
+          rgba(0,0,0,0.55) 55%,
+          rgba(0,0,0,0.9) 100%
+        ),
+        url("assets/images/Hero.jpeg") center/cover no-repeat;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
 
     .hero h1 {
       font-size: 56px;
@@ -104,6 +104,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 50px;
       align-items: center;
+      margin-bottom: 60px;
     }
 
     .about img {
@@ -115,6 +116,18 @@
       margin-bottom: 18px;
       font-size: 15px;
       opacity: 0.95;
+    }
+
+    /* Additional About Images */
+    .about-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .about-gallery img {
+      width: 100%;
+      border-radius: 6px;
     }
 
     /* ================= PORTFOLIO ================= */
@@ -182,6 +195,7 @@
   <!-- ABOUT -->
   <section id="about">
     <h2>ABOUT</h2>
+
     <div class="about">
       <img src="assets/images/About.JPG" alt="Chris performing live">
 
@@ -205,6 +219,13 @@
           and clarity. Let's make your sound the best it can be!
         </p>
       </div>
+    </div>
+
+    <!-- Additional About Images -->
+    <div class="about-gallery">
+      <img src="assets/images/About-2.jpg" alt="Studio session">
+      <img src="assets/images/About-3.jpg" alt="Live performance">
+      <img src="assets/images/About-4.jpg" alt="Mixing desk close-up">
     </div>
   </section>
 
