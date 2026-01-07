@@ -2,136 +2,254 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chris Samayoa | Audio Engineer</title>
-  <meta name="description" content="Audio engineering portfolio – mixing, mastering, podcast editing, and live sound." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
+    :root {
+      --bg-dark: #0b0b0b;
+      --bg-light: #f2f2f2;
+      --text-light: #ffffff;
+      --text-dark: #111111;
+      --accent: #cfcfcf;
+    }
+
+    * {
       margin: 0;
-      background: #0f0f0f;
-      color: #f5f5f5;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
       line-height: 1.6;
     }
-    header {
-      padding: 80px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #1a1a1a, #000);
+
+    section {
+      padding: 100px 8%;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      letter-spacing: 1px;
+
+    h1, h2 {
+      font-weight: 800;
+      letter-spacing: -0.04em;
     }
-    header p {
-      max-width: 700px;
-      margin: 20px auto 0;
-      color: #ccc;
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin-bottom: 30px;
+    }
+
+    p {
+      max-width: 640px;
+      font-size: 1.05rem;
+      color: var(--accent);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 8%;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+        url("/assets/images/hero.jpg") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero p {
+      margin-top: 20px;
       font-size: 1.1rem;
     }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-      font-size: 1.8rem;
-    }
-    .services, .projects {
+
+    /* ABOUT */
+    .about {
+      background: var(--bg-light);
+      color: var(--text-dark);
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
     }
-    .card {
-      background: #1b1b1b;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    .card h3 {
-      margin-top: 0;
-    }
-    audio {
+
+    .about img {
       width: 100%;
-      margin-top: 10px;
+      border-radius: 6px;
     }
-    footer {
-      padding: 40px 20px;
-      text-align: center;
+
+    .about p {
+      color: #333;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+      background: var(--bg-dark);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .portfolio-item h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .portfolio-item span {
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    /* CONTACT */
+    .contact {
       background: #000;
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 20px auto 40px;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #fff;
+      padding: 14px 28px;
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      font-size: 0.8rem;
       color: #777;
     }
-    a {
-      color: #4da3ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Chris Samayoa</h1>
-  <p>Audio Engineer specializing in mixing, mastering, podcast editing, and live sound. Clean, punchy, and professional audio for artists and creators.</p>
-</header>
-
-<section>
-  <h2>Services</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Music Mixing & Mastering</h3>
-      <p>Balanced, industry-ready mixes tailored to the artist’s sound and genre.</p>
+  <nav>
+    <strong>Chris Samayoa</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
     </div>
-    <div class="card">
-      <h3>Podcast Editing</h3>
-      <p>Dialogue cleanup, leveling, noise reduction, and final polish for podcasts.</p>
-    </div>
-    <div class="card">
-      <h3>Live Sound</h3>
-      <p>Setup, mixing, and monitoring for live events and small venues.</p>
-    </div>
-  </div>
-</section>
+  </nav>
 
-<section>
-  <h2>Portfolio</h2>
-  <div class="projects">
-    <div class="card">
-      <h3>Project Title</h3>
-      <p>Short description of the project and your role.</p>
-      <audio controls>
-        <source src="sample1.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Mix With Chris</h1>
+      <p>
+        Audio engineer specializing in mixing, mastering, podcast editing, and live sound.
+        Clean, punchy, and professional results for artists and creators.
+      </p>
     </div>
-    <div class="card">
-      <h3>Project Title</h3>
-      <p>Short description of the project and your role.</p>
-      <audio controls>
-        <source src="sample2.mp3" type="audio/mpeg">
-      </audio>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <img src="/assets/images/about.jpg" alt="Chris Samayoa working in studio">
+
+    <div>
+      <h2>About</h2>
+      <p>
+        I’m a 22-year-old audio engineer with an Associate’s Degree in Audio Engineering.
+        I focus on delivering high-quality sound with attention to detail, clear communication,
+        and fast turnaround times.
+      </p>
+      <p style="margin-top:16px;">
+        My background spans music production, podcast editing, and live sound — always with
+        the goal of making audio feel polished, intentional, and emotionally impactful.
+      </p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <h2>About</h2>
-  <p>I’m a 22-year-old audio engineer with an Associate’s Degree in Audio Engineering. I focus on delivering high-quality sound with attention to detail, clear communication, and fast turnaround times.</p>
-</section>
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-  <p>Instagram / SoundCloud / LinkedIn: <a href="#">@yourhandle</a></p>
-</section>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="/assets/images/portfolio-1.jpg" alt="Studio gear close-up">
+        <h3>Mixing & Mastering</h3>
+        <span>Music Production</span>
+      </div>
 
-<footer>
-  <p>© 2026 Chris Samayoa. All rights reserved.</p>
-</footer>
+      <div class="portfolio-item">
+        <img src="/assets/images/portfolio-2.jpg" alt="Audio rack equipment">
+        <h3>Podcast Editing</h3>
+        <span>Dialogue Cleanup & Polish</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Let’s Work Together</h2>
+    <p>
+      Interested in working together or have a project in mind?
+      Reach out and let’s talk.
+    </p>
+    <a href="mailto:your.email@example.com">Contact Me</a>
+  </section>
+
+  <footer>
+    © 2026 Chris Samayoa. All rights reserved.
+  </footer>
 
 </body>
 </html>
+
