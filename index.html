@@ -36,9 +36,10 @@
     align-items: center;
     z-index: 100;
 
-    background: transparent;
+    background: none;
+    box-shadow: none;
     backdrop-filter: none;
-}
+  }
 
     .header-left {
       font-size: 18px;
@@ -59,22 +60,20 @@
     .hero {
       height: 30vh;
       min-height: 360px;
- header {
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0)
-  );
-}
+      background:
+      linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.25) 0%,
+      rgba(0,0,0,0.85) 100%
+      ),
+      url("assets/images/Hero.jpeg") center / cover no-repeat;
 
-        url("assets/images/Hero.jpeg") center / cover no-repeat;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
 
     .hero h1 {
       font-size: 56px;
